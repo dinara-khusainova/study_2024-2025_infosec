@@ -1,0 +1,233 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Установка ОС на Virtual Box для дальнейшего использования в ходе
+прохождения курса.
+\end{frame}
+
+\begin{frame}{Задание}
+\phantomsection\label{ux437ux430ux434ux430ux43dux438ux435}
+\begin{enumerate}
+\tightlist
+\item
+  Установить ОС на Virtual Box.
+\item
+  Получите следующую информацию.
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Версия ядра Linux (Linux version).
+  \item
+    Частота процессора (Detected Mhz processor).
+  \item
+    Модель процессора (CPU0).
+  \item
+    Объем доступной оперативной памяти (Memory available).
+  \item
+    Тип обнаруженного гипервизора (Hypervisor detected).
+  \item
+    Тип файловой системы корневого раздела.
+  \item
+    Последовательность монтирования файловых систем. {[}1{]}
+  \end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Теоретическое введение}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435}
+Виртуальная машина (VM, от англ. virtual machine) --- программная и/или
+аппаратная система, эмулирующая аппаратное обеспечение некоторой
+платформы (guest --- гостевая платформа) и исполняющая программы для
+guest-платформы на host-платформе (host --- хост-платформа,
+платформа-хозяин) или виртуализирующая некоторую платформу и создающая
+на ней среды, изолирующие друг от друга программы и даже операционные
+системы; также спецификация некоторой вычислительной среды. {[}2{]}
+
+VirtualBox (Oracle VM VirtualBox) --- программный продукт виртуализации
+для операционных систем Windows, Linux, FreeBSD, macOS,
+Solaris/OpenSolaris, ReactOS, DOS и других. {[}3{]}
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+\end{frame}
+
+\begin{frame}{Установка ОС}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux43eux441}
+Предварительно были скачаны Virtual Box (и установлена) и дистрибутив
+Rocky.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/1.png}
+\caption{Имя виртуальной машины и путь ОС}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Установка ОС. Объем памяти}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux43eux441.-ux43eux431ux44aux435ux43c-ux43fux430ux43cux44fux442ux438}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/2.png}
+\caption{Задание объема памяти}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Установка ОС. Итоговая информация}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux43eux441.-ux438ux442ux43eux433ux43eux432ux430ux44f-ux438ux43dux444ux43eux440ux43cux430ux446ux438ux44f}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/3.png}
+\caption{Итоговая информация}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Запуск системы}
+\phantomsection\label{ux437ux430ux43fux443ux441ux43a-ux441ux438ux441ux442ux435ux43cux44b}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/4.png}
+\caption{Запуск}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Сеть и имя узла}
+\phantomsection\label{ux441ux435ux442ux44c-ux438-ux438ux43cux44f-ux443ux437ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/5.png}
+\caption{Настройка установки: сеть и имя узла}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Место установки оставляем неизменным}
+\phantomsection\label{ux43cux435ux441ux442ux43e-ux443ux441ux442ux430ux43dux43eux432ux43aux438-ux43eux441ux442ux430ux432ux43bux44fux435ux43c-ux43dux435ux438ux437ux43cux435ux43dux43dux44bux43c}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/6.png}
+\caption{Место установки}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Отключение KDUMP}
+\phantomsection\label{ux43eux442ux43aux43bux44eux447ux435ux43dux438ux435-kdump}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/7.png}
+\caption{Отключение KDUMP}\label{fig:007}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Установка пароля для root, создание пользователя}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux43fux430ux440ux43eux43bux44f-ux434ux43bux44f-root-ux441ux43eux437ux434ux430ux43dux438ux435-ux43fux43eux43bux44cux437ux43eux432ux430ux442ux435ux43bux44f}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/8.png}
+\caption{Установка пароля для root, создание
+пользователя}\label{fig:008}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Процесс установки}
+\phantomsection\label{ux43fux440ux43eux446ux435ux441ux441-ux443ux441ux442ux430ux43dux43eux432ux43aux438}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/9.png}
+\caption{Процесс установки}\label{fig:009}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Переход в ОС Linux}
+\phantomsection\label{ux43fux435ux440ux435ux445ux43eux434-ux432-ux43eux441-linux}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/10.png}
+\caption{Вход в систему}\label{fig:010}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Проверка корректности имени хоста}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux43aux43eux440ux440ux435ux43aux442ux43dux43eux441ux442ux438-ux438ux43cux435ux43dux438-ux445ux43eux441ux442ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/11.png}
+\caption{Проверка имени хоста}\label{fig:011}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Домашнее задание. Часть 1}
+\phantomsection\label{ux434ux43eux43cux430ux448ux43dux435ux435-ux437ux430ux434ux430ux43dux438ux435.-ux447ux430ux441ux442ux44c-1}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/12.png}
+\caption{Команда dmesg}\label{fig:012}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Домашнее задание. Часть 2}
+\phantomsection\label{ux434ux43eux43cux430ux448ux43dux435ux435-ux437ux430ux434ux430ux43dux438ux435.-ux447ux430ux441ux442ux44c-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/13.png}
+\caption{dmesg \textbar{} less}\label{fig:013}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Домашнее задание. Часть 3}
+\phantomsection\label{ux434ux43eux43cux430ux448ux43dux435ux435-ux437ux430ux434ux430ux43dux438ux435.-ux447ux430ux441ux442ux44c-3}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/14.png}
+\caption{Версия ядра Linux, частота процессора, модель процессора, объем
+доступной оперативной памяти, тип обнаруженного
+гипервизора}\label{fig:014}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Домашнее задание. Часть 4}
+\phantomsection\label{ux434ux43eux43cux430ux448ux43dux435ux435-ux437ux430ux434ux430ux43dux438ux435.-ux447ux430ux441ux442ux44c-4}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/15.png}
+\caption{Тип файловой системы корневого раздела. Последовательность
+монтирования файловых систем}\label{fig:015}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+В ходе выполнения лабораторной работы была установлена новая ОС на новую
+виртуальную машину. Так была найдена следующая информация:
+
+\begin{itemize}
+\tightlist
+\item
+  версия ядра Linux 5.14.0-427.13.1.el9\_4.x86\_64
+\item
+  частота процессора 2166.666 МГц
+\item
+  модель процессора Intel(R) Celeron(R) N2830 @ 2.16Ghz
+\item
+  обьем доступной оперативной памяти 260860К/20966969К
+\item
+  тип обнаруженного гипервизора KVM
+\item
+  тип файловой системы корневого раздела xfs
+\item
+  последовательность монтирования файловых систем
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Библиография}
+\phantomsection\label{ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+\begin{enumerate}
+\tightlist
+\item
+  Методические материалы курса.
+\item
+  Wikipedia: Виртуальная машина.
+  (https://ru.wikipedia.org/wiki/\%D0\%92\%D0\%B8\%D1\%80\%D1\%82\%D1\%83\%D0\%B0\%D0\%BB\%D1\%8C\%D0\%BD\%D0\%B0\%D1\%8F\_\%D0\%BC\%D0\%B0\%D1\%88\%D0\%B8\%D0\%BD\%D0\%B0)
+\item
+  Wikipedia: Virtual Box. (https://ru.wikipedia.org/wiki/VirtualBox)
+\end{enumerate}
+\end{frame}
