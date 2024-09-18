@@ -1,0 +1,108 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Получить практические навыки работы в консоли с атрибутами файлов,
+закрепить теоретические основы дискреционного разграничения доступа в
+современных системах с открытым кодом на базе ОС Linux
+\end{frame}
+
+\begin{frame}{Теоретическое введение}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435}
+\textbf{Операционная система} --- то комплекс программ, предназначенных
+для управления ресурсами компьютера и организации взаимодействия с
+пользователем {[}1{]}.
+
+\textbf{Права доступа} определяют, какие действия конкретный
+пользователь может или не может совершать с определенным файлами и
+каталогами. С помощью разрешений можно создать надежную среду --- такую,
+в которой никто не может поменять содержимое ваших документов или
+повредить системные файлы. {[}2{]}.
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+\end{frame}
+
+\begin{frame}{Атрибуты файлов 1}
+\phantomsection\label{ux430ux442ux440ux438ux431ux443ux442ux44b-ux444ux430ux439ux43bux43eux432-1}
+В установленной при выполнении предыдущей лабораторной работы
+операционной системе создадим учётную запись пользователя guest
+(использую учётную запись администратора): useradd guest Зададим пароль
+для пользователя guest (используя учётную запись администратора): passwd
+guest
+\end{frame}
+
+\begin{frame}{Атрибуты файлов 2}
+\phantomsection\label{ux430ux442ux440ux438ux431ux443ux442ux44b-ux444ux430ux439ux43bux43eux432-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/1.png}
+\caption{useradd guest}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Атрибуты файлов 3}
+\phantomsection\label{ux430ux442ux440ux438ux431ux443ux442ux44b-ux444ux430ux439ux43bux43eux432-3}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/2.png}
+\caption{passwd guest}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вход в систему от имени пользователя guest.}
+\phantomsection\label{ux432ux445ux43eux434-ux432-ux441ux438ux441ux442ux435ux43cux443-ux43eux442-ux438ux43cux435ux43dux438-ux43fux43eux43bux44cux437ux43eux432ux430ux442ux435ux43bux44f-guest.}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/3.png}
+\caption{passwd guest}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Команды whoami, id, cat /etc/passwd}
+\phantomsection\label{ux43aux43eux43cux430ux43dux434ux44b-whoami-id-cat-etcpasswd}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/4.png}
+\caption{whoami, id, cat /etc/passwd}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Команды lsattr /home, mkdir dir1, chmod 000 dir1, ls -l}
+\phantomsection\label{ux43aux43eux43cux430ux43dux434ux44b-lsattr-home-mkdir-dir1-chmod-000-dir1-ls--l}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/5.png}
+\caption{lsattr /home, mkdir dir1, chmod 000 dir1, ls -l}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Попытка создать файл}
+\phantomsection\label{ux43fux43eux43fux44bux442ux43aux430-ux441ux43eux437ux434ux430ux442ux44c-ux444ux430ux439ux43b}
+Попытайтесь создать в директории dir1 файл file1 командой echo ``test''
+\textgreater{} /home/guest/dir1/file1 Проверим командой, ls -l
+/home/guest/dir1 что действительно файл file1 не находится внутри
+директории dir1.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/6.png}
+\caption{echo ``test'' \textgreater{}
+/home/guest/dir1/file1}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+Были получены практические навыки работы в консоли с атрибутами файлов,
+закреплены теоретические основы дискреционного разграничения доступа в
+современных системах с открытым кодом на базе ОС Linux.
+\end{frame}
+
+\begin{frame}{Список литературы. Библиография}
+\phantomsection\label{ux441ux43fux438ux441ux43eux43a-ux43bux438ux442ux435ux440ux430ux442ux443ux440ux44b.-ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+{[}1{]} Операционные системы:
+https://blog.skillfactory.ru/glossary/operaczionnaya-sistema/
+
+{[}2{]} Права доступа:
+https://codechick.io/tutorials/unix-linux/unix-linux-permissions
+\end{frame}
