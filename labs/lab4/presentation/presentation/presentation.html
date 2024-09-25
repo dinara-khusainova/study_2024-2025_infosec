@@ -1,0 +1,121 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Получить практические навыки работы в консоли с расширенными атрибутами
+файлов.
+\end{frame}
+
+\begin{frame}{Теоретическое введение}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435}
+\textbf{Расширенные атрибуты файлов Linux} представляют собой пары
+имя:значение, которые постоянно связаны с файлами и каталогами, подобно
+тому как строки окружения связаны с процессом. Атрибут может быть
+определён или не определён. Если он определён, то его значение может
+быть или пустым, или не пустым. {[}2{]}
+
+Расширенные атрибуты дополняют обычные атрибуты, которые связаны со
+всеми inode в файловой системе (т. е., данные stat(2)). Часто они
+используются для предоставления дополнительных возможностей файловой
+системы, например, дополнительные возможности безопасности, такие как
+списки контроля доступа (ACL), могут быть реализованы через расширенные
+атрибуты. {[}3{]}
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+\end{frame}
+
+\begin{frame}{Команда lsattr}
+\phantomsection\label{ux43aux43eux43cux430ux43dux434ux430-lsattr}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/1.PNG}
+\caption{1-5 пункты задания лабораторной}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Повышение прав}
+\phantomsection\label{ux43fux43eux432ux44bux448ux435ux43dux438ux435-ux43fux440ux430ux432}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/2.PNG}
+\caption{Повышение прав}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Установка расширенного атрибута a от имени администратора}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux440ux430ux441ux448ux438ux440ux435ux43dux43dux43eux433ux43e-ux430ux442ux440ux438ux431ux443ux442ux430-a-ux43eux442-ux438ux43cux435ux43dux438-ux430ux434ux43cux438ux43dux438ux441ux442ux440ux430ux442ux43eux440ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/3.PNG}
+\caption{Установка расширенного атрибута a}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Попытка записи в файл}
+\phantomsection\label{ux43fux43eux43fux44bux442ux43aux430-ux437ux430ux43fux438ux441ux438-ux432-ux444ux430ux439ux43b}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/4.PNG}
+\caption{Запись в файл}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Снятие атрибута а}
+\phantomsection\label{ux441ux43dux44fux442ux438ux435-ux430ux442ux440ux438ux431ux443ux442ux430-ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/5.PNG}
+\caption{Снятие атрибута}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Проверка снятия атрибута}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux441ux43dux44fux442ux438ux44f-ux430ux442ux440ux438ux431ux443ux442ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/6.PNG}
+\caption{Проверка снятия атрибута}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Проверка возможности записи в файл}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux432ux43eux437ux43cux43eux436ux43dux43eux441ux442ux438-ux437ux430ux43fux438ux441ux438-ux432-ux444ux430ux439ux43b}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/7.PNG}
+\caption{Повтор действий успешен}\label{fig:007}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Повтор действий по шагам после замены атрибута «a»
+атрибутом «i»}
+\phantomsection\label{ux43fux43eux432ux442ux43eux440-ux434ux435ux439ux441ux442ux432ux438ux439-ux43fux43e-ux448ux430ux433ux430ux43c-ux43fux43eux441ux43bux435-ux437ux430ux43cux435ux43dux44b-ux430ux442ux440ux438ux431ux443ux442ux430-a-ux430ux442ux440ux438ux431ux443ux442ux43eux43c-i}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/8.PNG}
+\caption{Повтор действий с атрибутом i}\label{fig:008}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.7\textheight]{image/9.PNG}
+\caption{Повтор действий с атрибутом i}\label{fig:009}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+Были получены практические навыки работы в консоли с атрибутами файлов
+для групп пользователей
+\end{frame}
+
+\begin{frame}{Список литературы. Библиография}
+\phantomsection\label{ux441ux43fux438ux441ux43eux43a-ux43bux438ux442ux435ux440ux430ux442ux443ux440ux44b.-ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+{[}0{]} Методические материалы курса
+
+{[}1{]} Права доступа:
+https://codechick.io/tutorials/unix-linux/unix-linux-permissions
+
+{[}2{]} Группы пользователей:
+https://losst.pro/gruppy-polzovatelej-linux\#\%D0\%A7\%D1\%82\%D0\%BE\_\%D1\%82\%D0\%B0\%D0\%BA\%D0\%BE\%D0\%B5\_\%D0\%B3\%D1\%80\%D1\%83\%D0\%BF\%D0\%BF\%D1\%8B
+\end{frame}
