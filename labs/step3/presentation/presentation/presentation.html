@@ -1,0 +1,106 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Приобретение практических навыков по использованию инструмента Hydra для
+брутфорса паролей.
+\end{frame}
+
+\begin{frame}{Задание}
+\phantomsection\label{ux437ux430ux434ux430ux43dux438ux435}
+\begin{enumerate}
+\tightlist
+\item
+  Реализовать эксплуатацию уязвимости с помощью брутфорса паролей.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Теоретическое введение}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435}
+\begin{itemize}
+\tightlist
+\item
+  Hydra используется для подбора или взлома имени пользователя и пароля.
+\item
+  Поддерживает подбор для большого набора приложений.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Выполнение этапа}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux44dux442ux430ux43fux430}
+\end{frame}
+
+\begin{frame}[fragile]{Файл паролей rockyou.txt}
+\phantomsection\label{ux444ux430ux439ux43b-ux43fux430ux440ux43eux43bux435ux439-rockyou.txt}
+Чтобы пробрутфорсить пароль, нужно сначала найти большой список
+частоиспользуемых паролей. Его можно найти в открытых источниках, я
+взяла стандартный список паролей \texttt{rockyou.txt} для kali linux
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{image/2.PNG}
+\caption{Распаковка архива со списком паролей}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Сайт DVWA}
+\phantomsection\label{ux441ux430ux439ux442-dvwa}
+Захожу на сайт DVWA, полученный в ходе предыдущего этапа проекта. Для
+запроса hydra мне понадобятся параметры cookie с этого сайта
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{image/1.PNG}
+\caption{Сайт, с которого получаем информацию о параметрах
+Cookie}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Hydra запрос}
+\phantomsection\label{hydra-ux437ux430ux43fux440ux43eux441}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=\textheight]{image/6.PNG}
+\caption{Запрос Hydra}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Результат запроса}
+\phantomsection\label{ux440ux435ux437ux443ux43bux44cux442ux430ux442-ux437ux430ux43fux440ux43eux441ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.PNG}
+\caption{Результат запроса}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Ввод полученных данных на сайт для проверки}
+\phantomsection\label{ux432ux432ux43eux434-ux43fux43eux43bux443ux447ux435ux43dux43dux44bux445-ux434ux430ux43dux43dux44bux445-ux43dux430-ux441ux430ux439ux442-ux434ux43bux44f-ux43fux440ux43eux432ux435ux440ux43aux438}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.PNG}
+\caption{Ввод полученного результата в уязвимую форму}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Результат проверки пароля}
+\phantomsection\label{ux440ux435ux437ux443ux43bux44cux442ux430ux442-ux43fux440ux43eux432ux435ux440ux43aux438-ux43fux430ux440ux43eux43bux44f}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.PNG}
+\caption{Результат}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+Приобретены практические навыки по использованию инструмента Hydra для
+брутфорса паролей.
+\end{frame}
+
+\begin{frame}{Библиография}
+\phantomsection\label{ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+\begin{enumerate}
+\tightlist
+\item
+  Документация по DVWA: https://kali.tools/?p=1820
+\end{enumerate}
+\end{frame}
