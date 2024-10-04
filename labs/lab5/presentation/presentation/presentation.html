@@ -1,0 +1,174 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Изучение механизмов изменения идентификаторов, применения SetUID- и
+Sticky-битов. Получение практических навыков работы в кон- соли с
+дополнительными атрибутами. Рассмотрение работы механизма смены
+идентификатора процессов пользователей, а также влияние бита Sticky на
+запись и удаление файлов.
+\end{frame}
+
+\begin{frame}{Теоретическое введение 1/2}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435-12}
+. Дополнительные атрибуты файлов Linux
+
+В Linux существует три основных вида прав --- право на чтение (read),
+запись (write) и выполнение (execute), а также три категории
+пользователей, к которым они могут применяться --- владелец файла
+(user), группа владельца (group) и все остальные (others). Но, кроме
+прав чтения, выполнения и записи, есть еще три дополнительных атрибута.
+{[}@u{]}
+
+\textbf{Sticky bit}
+
+Используется в основном для каталогов, чтобы защитить в них файлы. В
+такой каталог может писать любой пользователь. Но, из такой директории
+пользователь может удалить только те файлы, владельцем которых он
+является. Примером может служить директория /tmp, в которой запись
+открыта для всех пользователей, но нежелательно удаление чужих файлов.
+\end{frame}
+
+\begin{frame}{Теоретическое введение 2/2}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435-22}
+\textbf{SUID (Set User ID)}
+
+Атрибут исполняемого файла, позволяющий запустить его с правами
+владельца. В Linux приложение запускается с правами пользователя,
+запустившего указанное приложение. Это обеспечивает дополнительную
+безопасность т.к. процесс с правами пользователя не сможет получить
+доступ к важным системным файлам, которые принадлежат пользователю root.
+
+\textbf{SGID (Set Group ID)}
+
+Аналогичен suid, но относиться к группе. Если установить sgid для
+каталога, то все файлы созданные в нем, при запуске будут принимать
+идентификатор группы каталога, а не группы владельца, который создал
+файл в этом каталоге.
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+\end{frame}
+
+\begin{frame}{Программа simpleid.c}
+\phantomsection\label{ux43fux440ux43eux433ux440ux430ux43cux43cux430-simpleid.c}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/1.PNG}
+\caption{Создание файла}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Компиляция simpleid.c}
+\phantomsection\label{ux43aux43eux43cux43fux438ux43bux44fux446ux438ux44f-simpleid.c}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/2.PNG}
+\caption{Компиляция}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Сравнения вывода команды и кода из файла}
+\phantomsection\label{ux441ux440ux430ux432ux43dux435ux43dux438ux44f-ux432ux44bux432ux43eux434ux430-ux43aux43eux43cux430ux43dux434ux44b-ux438-ux43aux43eux434ux430-ux438ux437-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.PNG}
+\caption{Сравнения вывода команды и кода из файла}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Изменение кода программы}
+\phantomsection\label{ux438ux437ux43cux435ux43dux435ux43dux438ux435-ux43aux43eux434ux430-ux43fux440ux43eux433ux440ux430ux43cux43cux44b}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.PNG}
+\caption{Усложненная программа, код}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Компиляция}
+\phantomsection\label{ux43aux43eux43cux43fux438ux43bux44fux446ux438ux44f}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.PNG}
+\caption{Компиляция и запуск программы}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{От имени суперпользователя команды}
+\phantomsection\label{ux43eux442-ux438ux43cux435ux43dux438-ux441ux443ux43fux435ux440ux43fux43eux43bux44cux437ux43eux432ux430ux442ux435ux43bux44f-ux43aux43eux43cux430ux43dux434ux44b}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/6.PNG}
+\caption{От имени суперпользователя команды}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Сравнение вывода simpleid2 и команды id}
+\phantomsection\label{ux441ux440ux430ux432ux43dux435ux43dux438ux435-ux432ux44bux432ux43eux434ux430-simpleid2-ux438-ux43aux43eux43cux430ux43dux434ux44b-id}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/7.PNG}
+\caption{simpleid2 и id}\label{fig:007}
+\end{figure}
+\end{frame}
+
+\begin{frame}{SetGID-бит}
+\phantomsection\label{setgid-ux431ux438ux442}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/8.PNG}
+\caption{SetGID-бит}\label{fig:008}
+\end{figure}
+\end{frame}
+
+\begin{frame}{readfile.c}
+\phantomsection\label{readfile.c}
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/9.PNG}
+\end{frame}
+
+\begin{frame}{Изменение прав}
+\phantomsection\label{ux438ux437ux43cux435ux43dux435ux43dux438ux435-ux43fux440ux430ux432}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/10.PNG}
+\caption{Изменение прав}\label{fig:010}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Проверка возможности чтение файла}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux432ux43eux437ux43cux43eux436ux43dux43eux441ux442ux438-ux447ux442ux435ux43dux438ux435-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/11.PNG}
+\caption{Проверка возможности чтение файла}\label{fig:011}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Исследование Sticky-бита}
+\phantomsection\label{ux438ux441ux441ux43bux435ux434ux43eux432ux430ux43dux438ux435-sticky-ux431ux438ux442ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/12.PNG}
+\caption{Выполнение действий}\label{fig:012}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+Изучили механизм изменения идентификаторов, применила SetUID- и
+Sticky-биты. Получила практические навыки работы в кон- соли с
+дополнительными атрибутами. Рассмотрела работы механизма смены
+идентификатора процессов пользователей, а также влияние бита Sticky на
+запись и удаление файлов.
+\end{frame}
+
+\begin{frame}{Список литературы. Библиография}
+\phantomsection\label{ux441ux43fux438ux441ux43eux43a-ux43bux438ux442ux435ux440ux430ux442ux443ux440ux44b.-ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+{[}0{]} Методические материалы курса
+
+{[}1{]} Права доступа:
+https://codechick.io/tutorials/unix-linux/unix-linux-permissions
+
+{[}2{]} Группы пользователей:
+https://losst.pro/gruppy-polzovatelej-linux\#\%D0\%A7\%D1\%82\%D0\%BE\_\%D1\%82\%D0\%B0\%D0\%BA\%D0\%BE\%D0\%B5\_\%D0\%B3\%D1\%80\%D1\%83\%D0\%BF\%D0\%BF\%D1\%8B
+\end{frame}
