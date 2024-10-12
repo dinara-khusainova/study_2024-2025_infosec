@@ -1,0 +1,125 @@
+\begin{frame}[fragile]
+\begin{block}{Цель}
+\phantomsection\label{ux446ux435ux43bux44c}
+Научиться использовать Burp Suite.
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+Запускаю локальный сервер, на котором открою веб-приложение DVWA для
+тестирования инструмента Burp Suite
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/1.PNG}
+\caption{Запуск локального сервера}\label{fig:001}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-1}
+Запускаю инструмент Burp Suite
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/2.PNG}
+\caption{Запуск приложения}\label{fig:002}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-2}
+Открываю сетевые настройки браузера, для подготовке к работе
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.PNG}
+\caption{Сетевые настройки браузера}\label{fig:003}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-3}
+Изменение настроек сервера для работы с proxy и захватом данных с
+помощью Burp Suite
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.PNG}
+\caption{Настройки сервера}\label{fig:004}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-4}
+Изменяю настройки Proxy инструмента Burp Suite для дальнейшей работы
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.PNG}
+\caption{Настройки Burp Suite}\label{fig:005}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-5}
+Во вкладке Proxy устанавливаю ``Intercept is on''
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/6.PNG}
+\caption{Настройки Proxy}\label{fig:006}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-6}
+Чтобы Burp Suite исправно работал с локальным сервером, наобходимо
+установить параметр \texttt{network\_allow\_hijacking\_loacalhost} на
+\texttt{true}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/7.PNG}
+\caption{Настройки параметров}\label{fig:007}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-7}
+Пытаюсь зайти в браузере на DVWA, тут же во вкладки Proxy появляется
+захваченный запрос. Нажимаем ``Forward'', чтобы загрузить страницу
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/8.PNG}
+\caption{Получаемые запросы сервера}\label{fig:008}
+\end{figure}
+\end{block}
+
+\begin{block}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-8}
+Загрузилась страница авторизации, текст запроса поменялся
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/9.PNG}
+\caption{Страница авторизации}\label{fig:009}
+\end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}{Выводы}
+\phantomsection\label{ux432ux44bux432ux43eux434ux44b}
+При выполнении лабораторной работы научилась использовать инструмент
+Burp Suite.
+\end{frame}
+
+\begin{frame}{Библиография}
+\phantomsection\label{ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+\begin{enumerate}
+\tightlist
+\item
+  Документация по DVWA: https://kali.tools/?p=1820
+\end{enumerate}
+\end{frame}
