@@ -1,0 +1,214 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Развить навыки администрирования ОС Linux. Получить первое практическое
+знакомство с технологией SELinux1. Проверить работу SELinx на практике
+совместно с веб-сервером Apache.
+\end{frame}
+
+\begin{frame}{Теоретическое введение 1/2}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435-12}
+\begin{enumerate}
+\tightlist
+\item
+  \textbf{SELinux (Security-Enhanced Linux)} обеспечивает усиление
+  защиты путем внесения изменений как на уровне ядра, так и на уровне
+  пространства пользователя, что превращает ее в действительно
+  «непробиваемую» операционную систему. Впервые эта система появилась в
+  четвертой версии CentOS, а в 5 и 6 версии реализация была существенно
+  дополнена и улучшена.
+\end{enumerate}
+
+\emph{SELinux имеет три основных режим работы:}
+
+\begin{itemize}
+\item
+  Enforcing: режим по умолчанию. При выборе этого режима все действия,
+  которые каким-то образом нарушают текущую политику безопасности, будут
+  блокироваться, а попытка нарушения будет зафиксирована в журнале.
+\item
+  Permissive: в случае использования этого режима, информация о всех
+  действиях, которые нарушают текущую политику безопасности, будут
+  зафиксированы в журнале, но сами действия не будут заблокированы.
+\item
+  Disabled: полное отключение системы принудительного контроля доступа.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Теоретическое введение 2/2}
+\phantomsection\label{ux442ux435ux43eux440ux435ux442ux438ux447ux435ux441ux43aux43eux435-ux432ux432ux435ux434ux435ux43dux438ux435-22}
+\textbf{Apache} --- это свободное программное обеспечение, с помощью
+которого можно создать веб-сервер. Данный продукт возник как
+доработанная версия другого HTTP-клиента от национального центра
+суперкомпьютерных приложений (NCSA).
+
+\emph{Для чего нужен Apache сервер:}
+
+\begin{itemize}
+\item
+  чтобы открывать динамические PHP-страницы,
+\item
+  для распределения поступающей на сервер нагрузки,
+\item
+  для обеспечения отказоустойчивости сервера,
+\item
+  чтобы потренироваться в настройке сервера и запуске PHP-скриптов.
+\end{itemize}
+
+Apache является кроссплатформенным ПО и поддерживает такие операционные
+системы, как Linux, BSD, MacOS, Microsoft, BeOS и другие.
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+\end{frame}
+
+\begin{frame}{getenforce и sestatus}
+\phantomsection\label{getenforce-ux438-sestatus}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/1.PNG}
+\caption{getenforce и sestatus}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{status}
+\phantomsection\label{status}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{image/2.PNG}
+\caption{status}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{ps auxZ \textbar{} grep httpd and sestatus}
+\phantomsection\label{ps-auxz-grep-httpd-and-sestatus}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.PNG}
+\caption{ps auxZ \textbar{} grep httpd and sestatus}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Определение типа файлов}
+\phantomsection\label{ux43eux43fux440ux435ux434ux435ux43bux435ux43dux438ux435-ux442ux438ux43fux430-ux444ux430ux439ux43bux43eux432}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.PNG}
+\caption{ls -lZ /var/www}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{создание файла}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.PNG}
+\caption{создание файла}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{проверка контекста}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux43aux43eux43dux442ux435ux43aux441ux442ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/6.PNG}
+\caption{проверка контекста}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{обращение к файлу}
+\phantomsection\label{ux43eux431ux440ux430ux449ux435ux43dux438ux435-ux43a-ux444ux430ux439ux43bux443}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/7.PNG}
+\caption{обращение к файлу}\label{fig:007}
+\end{figure}
+\end{frame}
+
+\begin{frame}{man httpd\_selinux}
+\phantomsection\label{man-httpd_selinux}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/8.PNG}
+\caption{man httpd\_selinux}\label{fig:008}
+\end{figure}
+\end{frame}
+
+\begin{frame}{проверка контекста файла}
+\phantomsection\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux43aux43eux43dux442ux435ux43aux441ux442ux430-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/9.PNG}
+\caption{проверка контекста файла}\label{fig:009}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Изменение контекста файла}
+\phantomsection\label{ux438ux437ux43cux435ux43dux435ux43dux438ux435-ux43aux43eux43dux442ux435ux43aux441ux442ux430-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/10.PNG}
+\caption{Изменение контекста файла}\label{fig:010}
+\end{figure}
+\end{frame}
+
+\begin{frame}{сообщение об ошибке}
+\phantomsection\label{ux441ux43eux43eux431ux449ux435ux43dux438ux435-ux43eux431-ux43eux448ux438ux431ux43aux435}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/11.PNG}
+\caption{You don't have permission to access}\label{fig:011}
+\end{figure}
+\end{frame}
+
+\begin{frame}{просмотр логов}
+\phantomsection\label{ux43fux440ux43eux441ux43cux43eux442ux440-ux43bux43eux433ux43eux432}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/12.PNG}
+\caption{просмотр логов}\label{fig:012}
+\end{figure}
+\end{frame}
+
+\begin{frame}{замена порта}
+\phantomsection\label{ux437ux430ux43cux435ux43dux430-ux43fux43eux440ux442ux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/13.PNG}
+\caption{замена порта}\label{fig:013}
+\end{figure}
+\end{frame}
+
+\begin{frame}{сбой}
+\phantomsection\label{ux441ux431ux43eux439}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/15.PNG}
+\caption{сбой}\label{fig:015}
+\end{figure}
+\end{frame}
+
+\begin{frame}{удаление файла}
+\phantomsection\label{ux443ux434ux430ux43bux435ux43dux438ux435-ux444ux430ux439ux43bux430}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/17.PNG}
+\caption{удаление файла}\label{fig:017}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\phantomsection\label{ux432ux44bux432ux43eux434}
+В ходе выполнения данной лабораторной работы были развиты навыки
+администрирования ОС Linux, получено первое практическое знакомство с
+технологией SELinux и проверена работа SELinux на практике совместно с
+веб-сервером Apache.
+\end{frame}
+
+\begin{frame}{Список литературы. Библиография}
+\phantomsection\label{ux441ux43fux438ux441ux43eux43a-ux43bux438ux442ux435ux440ux430ux442ux443ux440ux44b.-ux431ux438ux431ux43bux438ux43eux433ux440ux430ux444ux438ux44f}
+{[}0{]} Методические материалы курса
+
+{[}1{]} Права доступа:
+https://codechick.io/tutorials/unix-linux/unix-linux-permissions
+\end{frame}
